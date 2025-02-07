@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JJCanlas">
+    <title>1090 Angeles PDT</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="img/favicon.ico" rel="icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="img/logo1.png" alt="Logo" class="header-image">
+        <h2 class="header-title">PDT CHECKLIST</h2>
+        <a href="db.html" class="header-databaseBtn" id="databaseBtn">Database</a>
+    </header>
+
+    <main id="mainContent">
+        <div id="dashboard">
+            <h4>Add PDT</h4>
+            <p></p>
+            <form class="pdt" id="formPdt">
+    <label for="pdtNumber">PDT Number:</label>
+    <select id="pdtNumber">
+        <option value="">PDT No.</option>
+        <script>
+            for (let i = 1; i <= 100; i++) {
+                document.write(`<option value="${i}">${i}</option>`);
+            }
+        </script>
+    </select>
+
+    <label for="status">Status:</label>
+    <select id="status">
+        <option value="Received">Received</option>
+        <option value="Return">Return</option>
+    </select>
+
+    <label for="remarks">Remarks:</label>
+    <input type="text" id="remarks" placeholder="Remarks" />
+
+    <label for="serial">Serial No.:</label>
+    <input type="text" id="serial" oninput="populatepdtDetails()" placeholder="Scan Serial No." />
+
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" placeholder="Brand" />
+
+    <label for="model">Model:</label>
+    <input type="text" id="model" readonly placeholder="Model" />
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" readonly placeholder="Description" />
+    <br><br>
+
+    <button type="button" id="submitBtn" onclick="handleSubmit(event)" style="display:none;">Submit</button>
+</form>
+
+<h4>PDT List</h4>
+<div class="search-container">
+    <button id="clearBtn">Clear Log List</button>
+    <button type="button" id="exportBtn">Export</button>
+</div>
+<table id="tablePdt">
+    <thead>
+        <tr>
+            <th>PDT Number</th>
+            <th>Status</th>
+            <th>Serial No.</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Remarks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be populated here -->
+    </tbody>
+</table>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative; 
+    padding: 2px;
+    background-color: #4CAF50; 
+    height: 70px; 
+}
+
+.header-image {
+    position: absolute; 
+    left: 20px;
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 200px; 
+    height: 50px; 
+}
+
+.header-title {
+    margin: 0; 
+    text-align: center; 
+    color: #fff;
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.header-logoutBtn {
+    position: absolute; 
+    right: 20px;
+    top: 50%; 
+    transform: translateY(-59%); 
+ 
+}
+
+.header-databaseBtn {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-22px);
+    margin: 5px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+    padding: 9px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.formpdt {
+    background-color: #d1d1d1;
+    padding: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.formpdt select, 
+.formpdt input {
+    padding: 10px;
+    width: 170px; 
+    margin-bottom: 10px; 
+    border-radius: 5px;
+    border: 0px;
+}
+
+.totals {
+    position: relative;
+    padding: 2px;
+    color: red;
+    text-align: right; 
+    margin-top: -15px; 
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.totals span {
+    transition: color 0.3s; 
+}
+
+#totalIn:hover {
+    color: darkred; 
+}
+
+#totalOut:hover {
+    color: darkred; 
+}
+
+.pdt {
+    background-color: #d1d1d1;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.pdt select, 
+.pdt input {
+    padding: 8px;
+    width: 110px; 
+    margin-bottom: 8px; 
+}
+
+button {
+    margin: 5px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.deleteBtn {
+        padding: 5px 10px;
+        cursor: pointer;
+}
+
+main {
+    padding: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.pdt input, select {
+   padding: 8px;
+   border-radius: 5px;
+   border: 0px;
+   margin: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    table, th, td {
+        font-size: 12px;
+    }
+}
+
+.welcome-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#welcomeMessage {
+    font-size: 15px;
+    margin: 2px 0;
+}
+
+.search-container {
+        margin-bottom: 10px;
+    }
+    #searchInput {
+        padding: 5px;
+        margin-right: 5px;
+        text-align: left;
+        border-radius: 4px;
+        width: 250px;
+
+    }
+    #searchBtn, #clearBtn, #exportBtn, #deleteBtn {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+       
+    }
+    th {
+        background-color: #f2f2f2;
+    }
